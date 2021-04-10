@@ -393,7 +393,8 @@ private WeekDay weekDay;
 ```bash
 System.out.println("Current day type: " + weekDay.getDayType());
 ```
-After running the application, you will see the life cycle of the bean.
+#### 3.7. Run Application and see the results
+
 
 ### 4.BeanPostProcessor
 #### 4.1 Under spring package create a new package named postprocessor
