@@ -386,7 +386,6 @@ public class WeekDay implements InitializingBean, DisposableBean {
 ```
 
 #### 3.6. Go to Application class, inject WeekDay bean and print dayType value in the run method. 
-After running the application, you will see the life cycle of the bean.
 ```bash
 @Autowired
 private WeekDay weekDay;
@@ -394,7 +393,7 @@ private WeekDay weekDay;
 ```bash
 System.out.println("Current day type: " + weekDay.getDayType());
 ```
-
+After running the application, you will see the life cycle of the bean.
 
 ### 4.BeanPostProcessor
 #### 4.1 Under spring package create a new package named postprocessor
