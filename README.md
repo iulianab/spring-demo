@@ -204,7 +204,7 @@ public class JavaProductConfig {
     }
 }
 ```
-#### 2.6 In JavaConfigClass inject product1 and product2 beans and create a new bean of type List\<Product>
+#### 2.6 In JavaConfig class inject product1 and product2 beans and create a new bean of type List\<Product>
 ```bash
  @Autowired
  private Product product1;
@@ -218,7 +218,7 @@ public List<Product> productList() {
     return Arrays.asList(product1, product2);
 }
 ```
-#### 2.7 Under package beans create a class named Order
+#### 2.7 Under beans package create a class named Order
 ```bash
 @Component
 @Scope("prototype")
@@ -255,7 +255,7 @@ public class Order {
     }
 }
 ```
-#### 2.8 Under package beans create a class named CreditCard
+#### 2.8 Under beans package create a class named CreditCard
 ```bash
 @Component
 public class CreditCard {
@@ -270,7 +270,7 @@ public class CreditCard {
     }
 }
 ```
-#### 2.9 Under package beans create a class named Customer
+#### 2.9 Under beans package create a class named Customer
 ```bash
 @Component
 public class Customer {
@@ -385,8 +385,8 @@ public class WeekDay implements InitializingBean, DisposableBean {
 }
 ```
 
-#### Go to Application class, inject WeekDay bean and print dayType value in the run method. 
-After running the application, you will see the life cycle of the bean
+#### 3.6. Go to Application class, inject WeekDay bean and print dayType value in the run method. 
+After running the application, you will see the life cycle of the bean.
 ```bash
 @Autowired
 private WeekDay weekDay;
@@ -459,7 +459,7 @@ public Object postProcessAfterInitialization(Object bean, String beanName) throw
 ```bash
 database.url=jdbc:postgresql://localhost/CegekaAcademy
 ```
-#### 5.2 Under props package create a class named DatabaseInfo
+#### 5.3 Under props package create a class named DatabaseInfo
 ```bash
 @Component
 public class DatabaseInfo {
@@ -475,7 +475,7 @@ public class DatabaseInfo {
     }
 }
 ```
-#### 5.3 Go to Application class, inject DatabaseInfo bean and test getDatabaseUrl() getter in the run method
+#### 5.4 Go to Application class, inject DatabaseInfo bean and test getDatabaseUrl() getter in the run method
 ```bash
 @Autowired
 private DatabaseInfo databaseInfo;
@@ -485,13 +485,13 @@ System.out.println("Database url: " + databaseInfo.getDatabaseUrl());
 ```
 
 ### Method 2 -> using @ConfigurationProperties annotation
-#### 5.4 In the application.properties file add:
+#### 5.5 In the application.properties file add:
 ```bash
 application.details.name=Demo Spring
 application.details.createdAt=10/04/2021
 application.details.description=Beans Exercise
 ```
-#### 5.5 Under props package add a class named ApplicationDetails
+#### 5.6 Under props package add a class named ApplicationDetails
 ```bash
 @Component
 @ConfigurationProperties(prefix = "application.details")
@@ -529,7 +529,7 @@ public class ApplicationDetails {
     }
 }
 ```
-#### 5.6 Go to Application class, inject ApplicationDetails bean and test describe() method
+#### 5.7 Go to Application class, inject ApplicationDetails bean and test describe() method
 ```bash
 @Autowired
 private ApplicationDetails applicationDetails;
