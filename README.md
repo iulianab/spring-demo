@@ -5,7 +5,7 @@
 1. In Intellij Go to File -> New -> New Project from Version Control...
 
 2. Type the url
-https://github.com/CegekaJavaAcademy2021/sql-jdbc.git
+https://github.com/CegekaJavaAcademy2021/spring
 
 3. Choose your desired workspace and select Clone.
 
@@ -537,4 +537,42 @@ private ApplicationDetails applicationDetails;
 
 ```bash
 applicationDetails.describe();
+```
+
+# Homework
+
+The following classes are given:
+
+#### Job
+```bash
+fields: name, minSalary, maxSalary
+type: String, double, double
+```
+
+#### Employee
+```bash
+fields: name, job
+type: String, Job
+```
+
+#### Department
+```bash
+fields: id, employees
+type: String, List<Employee>
+```
+
+#### Company
+```bash
+fields: name, departments
+type: String, List<Department>
+```
+
+```bash
+Transform Java classes into beans.
+Requirements:
+      -> use both Java based configuration and Annotation based configuration
+      -> for some fields of types like String or Integer, use application.properties to get values for them
+      -> all the Dependency Injection types must be used (constructor, property, setter)
+      -> for one class use Prototype scope
+      -> test beans in Application class (you can create methods or use getters)
 ```
